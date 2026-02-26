@@ -1,110 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herrería Profesional - Fabricación e Instalación</title>
-    <link rel="stylesheet" href="css3/estilos.css">
-    <!-- Fuente moderna de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para iconos profesionales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herrería Profesional</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, #000, #1a1a1a);
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ff8c00;
+      margin: 0;
+    }
+    header p {
+      color: #ccc;
+      margin: 10px 0 20px;
+    }
+    .btn {
+      padding: 12px 25px;
+      background: #ff8c00;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 40px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content h3 {
+      color: #ff8c00;
+    }
+    .phone {
+      text-align: center;
+      font-size: 1.8em;
+      margin-top: 30px;
+      color: #ff8c00;
+      font-weight: bold;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header / Hero Section con imagen de taller de herrería -->
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <!-- Nota: Coloca un logo de herrería en imagenes/logo-herreria.png -->
-            <img src="imagenes/logo-herreria.png" alt="Herrería Profesional Logo" class="logo">
-            <h1 class="hero-title">Herrería Profesional</h1>
-            <p class="hero-subtitle">Estructuras · Barandales · Canceles Artísticos</p>
-            <div class="hero-contact">
-                <i class="fas fa-phone-alt"></i>
-                <span class="hero-phone">5572109431</span>
-            </div>
-            <p class="hero-tagline">Trabajos a medida · Fabricación e instalación</p>
-            <a href="#contacto" class="btn-hero">Solicita tu presupuesto</a>
-        </div>
-    </header>
 
-    <!-- Sección de Servicios con fondo de textura metálica -->
-    <section class="servicios">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="servicios-grid">
-                <div class="servicio-card" url('imagenes/estructura-metalica.jpg');>
-                    <i class="fas fa-building servicio-icon"></i>
-                    <h3>Estructuras Metálicas</h3>
-                    <p>Diseñamos y fabricamos estructuras robustas y duraderas para cualquier tipo de construcción.</p>
-                </div>
-                <div class="servicio-card">
-                    <i class="fas fa-border-all servicio-icon"></i>
-                    <h3>Barandales</h3>
-                    <p>Barandales modernos y clásicos, combinando seguridad y estética para tus espacios.</p>
-                </div>
-                <div class="servicio-card">
-                    <i class="fas fa-door-open servicio-icon"></i>
-                    <h3>Canceles Artísticos</h3>
-                    <p>Diseños exclusivos que realzan la entrada de tu hogar o negocio con un toque de distinción.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+  <h1>Herrería Profesional</h1>
+  <p>Estructuras • Barandales • Canceles • Puertas • Ventanas</p>
+  <a class="btn" href="https://wa.me/525572109431" target="_blank">Solicitar Cotización</a>
+</header>
 
-    <!-- Sección de Galería con imágenes de trabajos de herrería -->
-    <section class="galeria">
-        <div class="container">
-            <h2 class="section-title">Trabajos Recientes</h2>
-            <div class="galeria-grid">
-                <!-- Imagen de estructura metálica -->
-                <div class="galeria-item" style="background-image: url('imagenes/estructura-metalica.jpg');" aria-label="Estructura metálica para construcción"></div>
-                <!-- Imagen de barandal moderno -->
-                <div class="galeria-item" style="background-image: url('imagenes/barandal-moderno.jpg');" aria-label="Barandal de acero inoxidable"></div>
-                <!-- Imagen de cancel artístico -->
-                <div class="galeria-item" style="background-image: url('imagenes/cancel-artistico.jpg');" aria-label="Cancel artístico con diseños forjados"></div>
-                <!-- Imagen adicional de escalera metálica -->
-                <div class="galeria-item" style="background-image: url('imagenes/escalera-metalica.jpg');" aria-label="Escalera de hierro forjado"></div>
-                <!-- Imagen de puerta de herrería -->
-                <div class="galeria-item" style="background-image: url('imagenes/puerta-herreria.jpg');" aria-label="Puerta principal de herrería"></div>
-                <!-- Imagen de protector de ventana -->
-                <div class="galeria-item" style="background-image: url('imagenes/protector-ventana.jpg');" aria-label="Protector de ventana decorativo"></div>
-            </div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Sección de Contacto con imagen de taller 
-    <section id="contacto" class="contacto">
-        <div class="contacto-overlay"></div>
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contacto-wrapper">
-                <div class="contacto-info">
-                    <h3>¡Cotiza con nosotros!</h3>
-                    <p><i class="fas fa-phone-alt"></i> <strong>Llámanos:</strong> 5572109431</p>
-                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@herreriaprofesional.com">info@herreriaprofesional.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Ciudad de México y Zona Metropolitana</p>
-                    <p class="contacto-destacado">Trabajos a medida · Fabricación e instalación profesional</p>
-                </div>
-                <form class="contacto-form">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Teléfono">
-                    <textarea placeholder="Cuéntanos tu proyecto..." rows="5" required></textarea>
-                    <button type="submit" class="btn-form">Enviar mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>-->
+  <h2>Servicios</h2>
+  <div class="grid">
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Herrería Profesional. Todos los derechos reservados.</p>
-            <p>Tel: 5572109431 | Trabajos a medida · Fabricación e instalación</p>
-        </div>
-    </footer>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091870627-3f6b6a47eec1" alt="Herrería">
+      <div class="content">
+        <h3>Canceles y Portones</h3>
+        <p>Fabricación de canceles modernos y portones de alta seguridad.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Barandales">
+      <div class="content">
+        <h3>Barandales</h3>
+        <p>Diseños elegantes para interiores y exteriores.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598300053653-0c0d7d1b2c8b" alt="Puertas">
+      <div class="content">
+        <h3>Puertas y Ventanas</h3>
+        <p>Instalación de estructuras resistentes y estéticas.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="phone">📞 5572109431</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/525572109431" target="_blank">💬</a>
+
+<footer>
+  © 2026 Herrería Profesional | Todos los derechos reservados
+</footer>
+
 </body>
 </html>
